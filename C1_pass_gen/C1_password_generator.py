@@ -15,3 +15,16 @@ def gen_password(length = 15, special = True, numbers = True):
     password = ''.join(random.choice(chars) for i in range(length))
     return password
 
+def main():
+    print("Generate a randomized password of desired difficulty")
+    length = int(input("Enter the length of the password: "))
+    special = input("Do you wish to include special characters? (y/n): ").lower() == 'y'
+    numbers = input("Do you wish to include numbers? (y/n): ").lower() == 'y'
+
+    password = gen_password(length, special, numbers)
+
+    print(f"\nGenerated password: {password}")
+
+if __name__ == "__main__":
+    main()
+    
