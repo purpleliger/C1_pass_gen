@@ -1,8 +1,13 @@
 import random
 import string
 
-"""Function generates a 15 character password including special characters and numbers."""
 def gen_password(length = 15, special = True, numbers = True):
+    """Function generates a 15 character password including special characters and numbers.
+    Params: length (int)
+    Returns: str
+    >>> gen_password(15)
+    'aO6q+6EYcpEs;,
+    """
     chars = string.ascii_letters + string.digits
     #if user selects 'y' for special characters, then include them
     if special:
